@@ -1,0 +1,75 @@
+﻿@page "{id:int?}"
+@model NewNew.Pages.FormSubmissions.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>FormSubmission</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="FormSubmission.ID" />
+            <div class="form-group">
+                <label asp-for="FormSubmission.FirstName" class="control-label"></label>
+                <input asp-for="FormSubmission.FirstName" class="form-control" />
+                <span asp-validation-for="FormSubmission.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FormSubmission.LastName" class="control-label"></label>
+                <input asp-for="FormSubmission.LastName" class="form-control" />
+                <span asp-validation-for="FormSubmission.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FormSubmission.DriverEmail" class="control-label"></label>
+                <input asp-for="FormSubmission.DriverEmail" class="form-control" />
+                <span asp-validation-for="FormSubmission.DriverEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FormSubmission.DriverID" class="control-label"></label>
+                <input asp-for="FormSubmission.DriverID" class="form-control" />
+                <span asp-validation-for="FormSubmission.DriverID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FormSubmission.DriverDesignation" class="control-label"></label>
+                <input asp-for="FormSubmission.DriverDesignation" class="form-control" />
+                <span asp-validation-for="FormSubmission.DriverDesignation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FormSubmission.BeginDate" class="control-label"></label>
+                <input asp-for="FormSubmission.BeginDate" class="form-control" />
+                <span asp-validation-for="FormSubmission.BeginDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FormSubmission.EndDate" class="control-label"></label>
+                <input asp-for="FormSubmission.EndDate" class="form-control" />
+                <span asp-validation-for="FormSubmission.EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FormSubmission.AdditionalDetails" class="control-label"></label>
+                <input asp-for="FormSubmission.AdditionalDetails" class="form-control" />
+                <span asp-validation-for="FormSubmission.AdditionalDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FormSubmission.BeginDuration" class="control-label"></label>
+                <input asp-for="FormSubmission.BeginDuration" class="form-control" />
+                <span asp-validation-for="FormSubmission.BeginDuration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

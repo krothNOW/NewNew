@@ -1,0 +1,73 @@
+﻿@page "{id:int?}"
+@model NewNew.Pages.FormSubmissions.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FormSubmission</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.DriverEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.DriverEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.DriverID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.DriverID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.DriverDesignation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.DriverDesignation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.BeginDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.BeginDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.EndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.EndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.AdditionalDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.AdditionalDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.BeginDuration)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.BeginDuration)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.FormSubmission.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

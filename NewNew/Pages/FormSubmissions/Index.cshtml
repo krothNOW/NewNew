@@ -1,0 +1,96 @@
+﻿@page
+@model NewNew.Pages.FormSubmissions.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<form>
+    <p>
+        <select asp-for="FormSubmissionDriverDesignation" asp-items="Model.DriverDesignations">
+            <option value="">All</option>
+        </select>
+
+        Last Name: <input type="text" name="searchString">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FormSubmission[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormSubmission[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormSubmission[0].DriverEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormSubmission[0].DriverID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormSubmission[0].DriverDesignation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormSubmission[0].BeginDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormSubmission[0].EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormSubmission[0].AdditionalDetails)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormSubmission[0].BeginDuration)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.FormSubmission) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DriverEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DriverID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DriverDesignation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BeginDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdditionalDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BeginDuration)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

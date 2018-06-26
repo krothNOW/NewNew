@@ -1,0 +1,76 @@
+﻿@page "{id:int?}"
+@model NewNew.Pages.FormSubmissions.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FormSubmission</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.DriverEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.DriverEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.DriverID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.DriverID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.DriverDesignation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.DriverDesignation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.BeginDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.BeginDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.EndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.EndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.AdditionalDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.AdditionalDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormSubmission.BeginDuration)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormSubmission.BeginDuration)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="FormSubmission.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
